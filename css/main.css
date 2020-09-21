@@ -1,0 +1,554 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+body {
+  position: relative;
+  font-size: 1.6rem;
+}
+
+@media only screen and (min-width: 112.5em) {
+  body {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  body {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  body {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  body {
+    font-size: 40%;
+  }
+}
+
+body {
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+nav {
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 8vh;
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 3px 9.5px 0.5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 9.5px 0.5px rgba(0, 0, 0, 0.15);
+}
+
+nav a {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Montserrat", "Ubuntu", sans-serif;
+  color: #222;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav a span {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.main {
+  background-color: rgba(30, 215, 96, 0.6);
+  width: 100%;
+  height: 92vh;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.main .content {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 5rem 0;
+  width: 70%;
+  -webkit-box-shadow: 0px 3px 9.5px 0.5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 9.5px 0.5px rgba(0, 0, 0, 0.15);
+}
+
+.main .content h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  font-family: "Montserrat", "Ubuntu", sans-serif;
+  color: #222;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.main .content ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.main .content ul.parsley-errors-list {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.main .content ul.parsley-errors-list li {
+  padding-top: .5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  background-color: transparent;
+  color: orangered;
+  font-family: "Montserrat", "Ubuntu", sans-serif;
+  padding-bottom: 0;
+}
+
+.main .content ul li {
+  -ms-flex-preferred-size: 33.3%;
+      flex-basis: 33.3%;
+  background-color: rgba(128, 128, 128, 0.1);
+  color: rgba(153, 153, 153, 0.8);
+  font-size: 2.4rem;
+  font-weight: bold;
+  font-family: "Montserrat", "Ubuntu", sans-serif;
+  text-align: center;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  cursor: pointer;
+}
+
+.main .content ul li.active {
+  background-color: #1ed760;
+  color: #ffffff;
+}
+
+.main .content__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main .content__box .tab-1, .main .content__box .tab-2, .main .content__box .tab-3 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-color: transparent;
+  display: none;
+  opacity: 0;
+  -webkit-transform: scaleY(0.2) translateY(-7rem);
+          transform: scaleY(0.2) translateY(-7rem);
+  -webkit-transition: all 700ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 700ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.main .content__box .tab-1 .alert__box, .main .content__box .tab-2 .alert__box, .main .content__box .tab-3 .alert__box {
+  margin: 2rem auto;
+}
+
+.main .content__box .tab-1 form, .main .content__box .tab-2 form, .main .content__box .tab-3 form {
+  width: 70%;
+  margin: 2rem auto;
+}
+
+.main .content__box .tab-1 form .form__group, .main .content__box .tab-2 form .form__group, .main .content__box .tab-3 form .form__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.main .content__box .tab-1 form .form__group .form__row, .main .content__box .tab-2 form .form__group .form__row, .main .content__box .tab-3 form .form__group .form__row {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.main .content__box .tab-1 form .form__group .form__row input[type="checkbox"], .main .content__box .tab-2 form .form__group .form__row input[type="checkbox"], .main .content__box .tab-3 form .form__group .form__row input[type="checkbox"] {
+  margin: 0;
+  margin-right: .5rem;
+  cursor: pointer;
+}
+
+.main .content__box .tab-1 form .form__group .form__row label, .main .content__box .tab-2 form .form__group .form__row label, .main .content__box .tab-3 form .form__group .form__row label {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #999999;
+}
+
+.main .content__box .tab-1 form .form__group label, .main .content__box .tab-2 form .form__group label, .main .content__box .tab-3 form .form__group label {
+  padding-bottom: .5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #999999;
+}
+
+.main .content__box .tab-1 form .form__group span, .main .content__box .tab-2 form .form__group span, .main .content__box .tab-3 form .form__group span {
+  padding-top: .5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: orangered;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.main .content__box .tab-1 form .form__group input, .main .content__box .tab-2 form .form__group input, .main .content__box .tab-3 form .form__group input {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  border: 1px solid #ebebeb;
+  color: #1ed760;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.main .content__box .tab-1 form .form__group input:focus, .main .content__box .tab-2 form .form__group input:focus, .main .content__box .tab-3 form .form__group input:focus {
+  outline: none;
+  border: 2px solid #1ed760;
+}
+
+.main .content__box .tab-1 form .form__group input:focus:invalid, .main .content__box .tab-2 form .form__group input:focus:invalid, .main .content__box .tab-3 form .form__group input:focus:invalid {
+  border: 2px solid orangered;
+}
+
+.main .content__box .tab-1 form .form__group input::-webkit-input-placeholder, .main .content__box .tab-2 form .form__group input::-webkit-input-placeholder, .main .content__box .tab-3 form .form__group input::-webkit-input-placeholder {
+  color: #1ed760;
+}
+
+.main .content__box .tab-1 form .control, .main .content__box .tab-2 form .control, .main .content__box .tab-3 form .control {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem auto;
+}
+
+.main .content__box .tab-1 form .control .end, .main .content__box .tab-2 form .control .end, .main .content__box .tab-3 form .control .end {
+  margin-left: auto;
+}
+
+.main .content__box .tab-1 .control, .main .content__box .tab-2 .control, .main .content__box .tab-3 .control {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem auto;
+}
+
+.main .content__box .tab-1 .control .end, .main .content__box .tab-2 .control .end, .main .content__box .tab-3 .control .end {
+  margin-left: auto;
+}
+
+.main .content__box .tab-1.fade-in, .main .content__box .tab-2.fade-in, .main .content__box .tab-3.fade-in {
+  -webkit-transform: scaleY(1) translateY(0);
+          transform: scaleY(1) translateY(0);
+  opacity: 1;
+}
+
+.main .content__box .tab-1.block, .main .content__box .tab-2.block, .main .content__box .tab-3.block {
+  display: block;
+}
+
+.main .content__box .tab-2 .role {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .content__box .tab-2 .role .role-radio.left {
+  margin-right: 5rem;
+}
+
+.main .content__box .tab-2 .role .role-radio input {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.main .content__box .tab-2 .role .role-radio input:checked + label {
+  z-index: 1;
+}
+
+.main .content__box .tab-2 .role .role-radio input:checked + label figure {
+  border: 2px solid #1ed760;
+}
+
+.main .content__box .tab-2 .role .role-radio input:checked + label figure img {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.main .content__box .tab-2 .role .role-radio input:checked + label span {
+  color: #1ed760;
+}
+
+.main .content__box .tab-2 .role .role-radio label {
+  -webkit-transition: border-color .15s ease-out,background-color .15s ease-out, -webkit-box-shadow .15s ease-out;
+  transition: border-color .15s ease-out,background-color .15s ease-out, -webkit-box-shadow .15s ease-out;
+  transition: border-color .15s ease-out,background-color .15s ease-out, box-shadow .15s ease-out;
+  transition: border-color .15s ease-out,background-color .15s ease-out, box-shadow .15s ease-out,-webkit-box-shadow .15s ease-out;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .content__box .tab-2 .role .role-radio label span {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Montserrat", "Ubuntu", sans-serif;
+  padding-top: 1.5rem;
+}
+
+.main .content__box .tab-2 .role .role-radio label figure {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .content__box .tab-2 .role .role-radio label figure img {
+  -webkit-filter: invert(30%) grayscale(100%) brightness(70%) contrast(4);
+          filter: invert(30%) grayscale(100%) brightness(70%) contrast(4);
+}
+
+.main .content__box .tab-3 .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: center;
+          flex-direction: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.main .content__box .tab-3 .info h1 {
+  padding-bottom: 1rem;
+}
+
+.main .content__box .tab-3 .info p {
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-family: "Montserrat", "Ubuntu", sans-serif;
+  color: #222;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.button {
+  width: 14rem;
+  height: 5rem;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #1ed760;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-family: "Montserrat", "Ubuntu", sans-serif;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.button:hover {
+  background: rgba(30, 215, 96, 0.5);
+}
+
+.button:disabled {
+  background: rgba(255, 69, 0, 0.2);
+}
+
+.loading {
+  position: relative;
+  background-color: rgba(30, 215, 96, 0.99);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .7s;
+  transition: all .7s;
+}
+
+.loading.loaded {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(184, 179, 179, 0.482)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(184, 179, 179, 0.482), transparent);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-animation: loading 1.5s;
+          animation: loading 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+          animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+@-webkit-keyframes loading {
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes loading {
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+/*# sourceMappingURL=main.css.map */
